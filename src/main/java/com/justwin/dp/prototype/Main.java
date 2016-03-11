@@ -1,8 +1,10 @@
 package com.justwin.dp.prototype;
 
 import static org.junit.Assert.*;
+
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * 
@@ -28,6 +30,16 @@ public class Main {
 	
 		assertNotEquals(resume, cloneResume);
 		
-		// TODO 深拷贝 work experience
+		List<WorkExperience> workExperience = resume.getWorkExperience();
+		List<WorkExperience> cloneWorkExperience = cloneResume.getWorkExperience();
+		
+		System.out.println("Work experience length: " +  workExperience.size() + ", Clone work experience: " + cloneWorkExperience.size());
+		for (int i = 0; i < workExperience.size(); i++) {
+			// 浅拷贝测试
+//			if (workExperience.get(i) == cloneWorkExperience.get(i)) {
+//				System.out.println("Object equals!");
+//			}
+			assertNotEquals(workExperience.get(i), cloneWorkExperience.get(i));
+		}
 	}
 }

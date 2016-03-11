@@ -16,7 +16,10 @@ public class WorkExperience implements Cloneable{
 	
 	@Override
 	protected Object clone() throws CloneNotSupportedException {
-		return super.clone();
+		WorkExperience clone = (WorkExperience) super.clone();
+		clone.start = (Date) start.clone();
+		clone.end = (Date) end.clone();
+		return clone;
 	}
 
 	@Override
