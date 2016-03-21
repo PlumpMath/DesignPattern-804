@@ -1,4 +1,4 @@
-package com.justwin.dp.flyweight;
+package com.justwin.dp.flyweight.learn;
 
 public class Circle extends Shape {
 

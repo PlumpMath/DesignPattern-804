@@ -1,4 +1,4 @@
-package com.justwin.dp.flyweight;
+package com.justwin.dp.flyweight.learn;
 
 import java.util.HashMap;
 import java.util.Map;
